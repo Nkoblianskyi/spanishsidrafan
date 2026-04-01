@@ -20,7 +20,7 @@ export default function PrivacyPage() {
 
         <div className="flex flex-col gap-8 font-sans text-parchment/80 leading-relaxed">
           <div>
-            <p className="text-muted-foreground text-sm mb-6">Última actualización: enero de 2025</p>
+            <p className="text-muted-foreground text-sm mb-6">Última actualización: 2026</p>
             <p>
               FISCUS NOSTRUM FUND SERVICES LIMITED (&ldquo;nosotros&rdquo;, &ldquo;nuestro&rdquo;) opera el sitio web
               <strong className="text-parchment"> spanishsidrafan.com</strong>. Esta Política de Privacidad
