@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import CookieBanner from "@/components/cookie-banner"
 import AlcoholBanner from "@/components/alcohol-banner"
+import { IMAGES } from "@/lib/media"
 
 
 const sidraPreview = [
@@ -11,7 +12,7 @@ const sidraPreview = [
     name: "Sidra Natural",
     subtitle: "La auténtica",
     strength: "4–6%",
-    image: "/images/sidra-natural.jpg",
+    image: IMAGES.sidra.natural,
     desc: "Fermentación natural sin azúcares añadidos. Seca, refrescante, con vibrante acidez de manzana.",
     href: "/catalogo",
     featured: true,
@@ -20,7 +21,7 @@ const sidraPreview = [
     name: "Sidra Espumosa",
     subtitle: "La festiva",
     strength: "5–7%",
-    image: "/images/sidra-espumosa.jpg",
+    image: IMAGES.sidra.espumosa,
     desc: "Burbujeante y elegante. Popular entre jóvenes y turistas, ligeramente más dulce.",
     href: "/catalogo",
     featured: false,
@@ -29,7 +30,7 @@ const sidraPreview = [
     name: "Sidra Nueva Expresión",
     subtitle: "La moderna",
     strength: "5–6%",
-    image: "/images/sidra-nueva.jpg",
+    image: IMAGES.sidra.nueva,
     desc: "Estilo contemporáneo, filtrada y suave. Mantiene el carácter de manzana asturiana.",
     href: "/catalogo",
     featured: false,

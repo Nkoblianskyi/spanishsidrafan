@@ -4,6 +4,7 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import CookieBanner from "@/components/cookie-banner"
 import AlcoholBanner from "@/components/alcohol-banner"
+import { IMAGES } from "@/lib/media"
 
 const sidras = [
   {
@@ -12,7 +13,7 @@ const sidras = [
     subtitle: "La Auténtica Tradición",
     strength: "4–6%",
     region: "Asturias, País Vasco",
-    image: "/images/sidra-natural.jpg",
+    image: IMAGES.sidra.natural,
     badge: "La Más Tradicional",
     badgeColor: "bg-crimson-light",
     description:
@@ -32,7 +33,7 @@ const sidras = [
     subtitle: "La Festiva y Elegante",
     strength: "5–7%",
     region: "Todo el país",
-    image: "/images/sidra-espumosa.jpg",
+    image: IMAGES.sidra.espumosa,
     badge: "La Más Fuerte",
     badgeColor: "bg-gold text-charcoal",
     description:
@@ -52,7 +53,7 @@ const sidras = [
     subtitle: "La Vanguardia Sidrera",
     strength: "5–6%",
     region: "Asturias",
-    image: "/images/sidra-nueva.jpg",
+    image: IMAGES.sidra.nueva,
     badge: "La Más Moderna",
     badgeColor: "bg-charcoal-mid border border-gold/50",
     description:

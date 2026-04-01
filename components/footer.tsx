@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { MapPin } from "lucide-react"
+import { Mail, MapPin } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -52,6 +52,15 @@ export default function Footer() {
                 Nicosia 1095<br />
                 Cyprus
               </address>
+            </div>
+            <div className="flex gap-3 items-start">
+              <Mail size={16} className="text-crimson-light mt-1 shrink-0" />
+              <a
+                href="mailto:info@spanishsidrafan.com"
+                className="text-muted-foreground hover:text-gold text-sm font-sans transition-colors duration-200 break-all"
+              >
+                info@spanishsidrafan.com
+              </a>
             </div>
           </div>
         </div>

@@ -4,11 +4,13 @@ import Navbar from "@/components/navbar"
 import Footer from "@/components/footer"
 import CookieBanner from "@/components/cookie-banner"
 import AlcoholBanner from "@/components/alcohol-banner"
+import { IMAGES } from "@/lib/media"
 
 const beers = [
   {
     name: "Cerveza Lager",
     subtitle: "El Hit Español",
+    image: IMAGES.beer.lager,
     strength: "4,5–5,5",
     strengthNum: 5.5,
     region: "Todo el país",
@@ -23,6 +25,7 @@ const beers = [
   {
     name: "Cerveza Especial",
     subtitle: "Para el Entendido",
+    image: IMAGES.beer.especial,
     strength: "5–6",
     strengthNum: 6,
     region: "Toda España",
@@ -37,6 +40,7 @@ const beers = [
   {
     name: "Cerveza Sin Alcohol",
     subtitle: "La Elección Inteligente",
+    image: IMAGES.beer.sinAlcohol,
     strength: "0,0–1",
     strengthNum: 0.5,
     region: "Nacional",
@@ -51,6 +55,7 @@ const beers = [
   {
     name: "Cerveza Artesanal (Craft)",
     subtitle: "La Nueva Ola",
+    image: IMAGES.beer.artesanal,
     strength: "5–8+",
     strengthNum: 8,
     region: "Madrid, Barcelona, País Vasco, Galicia",
@@ -150,6 +155,23 @@ export default function CervezaPage() {
 
       {/* Beer catalog */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
+        {/* Photo */}
+        <div className="relative overflow-hidden corrida-border mb-14">
+          <Image
+            src="/images/beer-bg.jpg"
+            alt="Cerveza española con tapas"
+            width={1400}
+            height={520}
+            className="w-full h-56 md:h-72 object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-charcoal/85 via-charcoal/35 to-transparent" />
+          <div className="absolute inset-0 flex items-end px-8 pb-6">
+            <p className="text-parchment/80 font-sans text-sm md:text-base max-w-xl">
+              La caña perfecta, bien fría, y una tapa — el dúo más español.
+            </p>
+          </div>
+        </div>
+
         <div className="text-center mb-14">
           <p className="text-gold font-sans text-xs tracking-[0.5em] uppercase mb-3">Guía completa</p>
           <h2 className="font-serif text-4xl md:text-5xl font-bold text-parchment text-balance mb-4">
@@ -163,6 +185,17 @@ export default function CervezaPage() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {beers.map((beer, i) => (
             <article key={beer.name} className="corrida-border p-8 hover:border-gold/50 transition-colors flex flex-col gap-5">
+              <div className="relative overflow-hidden rounded-sm border border-gold/15">
+                <Image
+                  src={beer.image ?? "/images/beer-bg.jpg"}
+                  alt={beer.name}
+                  width={900}
+                  height={420}
+                  className="w-full h-40 md:h-44 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/15 to-transparent" />
+              </div>
+
               <div className="flex items-start justify-between gap-4">
                 <div>
                   <p className="text-gold font-sans text-xs tracking-[0.4em] uppercase mb-1">{beer.subtitle}</p>
