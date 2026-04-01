@@ -79,7 +79,7 @@ export default function PrivacyPage() {
             <p className="text-sm text-muted-foreground font-sans">
               Si tiene alguna pregunta sobre esta política, puede contactarnos en:<br />
               <strong className="text-gold">FISCUS NOSTRUM FUND SERVICES LIMITED</strong><br />
-              Panagioti Kaspi 5A, Nicosia 1095, Cyprus
+              Myrianthous Anna, Panagioti Kaspi 5A, Nicosia 1095, Cyprus
             </p>
           </div>
         </div>
