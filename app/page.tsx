@@ -38,10 +38,30 @@ const sidraPreview = [
 ]
 
 const beers = [
-  { name: "Cerveza Lager", strength: "4,5–5,5%", desc: "Ligera, limpia e increíblemente refrescante. El hit absoluto español." },
-  { name: "Cerveza Especial", strength: "5–6%", desc: "Lager más rico y con carácter malteado. La elección de los verdaderos entendidos." },
-  { name: "Cerveza Sin Alcohol", strength: "0,0–1%", desc: "Enormemente popular en España, especialmente en verano y al volante." },
-  { name: "Cerveza Artesanal", strength: "hasta 8%", desc: "El movimiento craft florece: IPAs frutales, ales ligeras y mucho más." },
+  {
+    name: "Cerveza Lager",
+    strength: "4,5–5,5%",
+    image: IMAGES.beer.lager,
+    desc: "Ligera, limpia e increíblemente refrescante. El hit absoluto español.",
+  },
+  {
+    name: "Cerveza Especial",
+    strength: "5–6%",
+    image: IMAGES.beer.especial,
+    desc: "Lager más rico y con carácter malteado. La elección de los verdaderos entendidos.",
+  },
+  {
+    name: "Cerveza Sin Alcohol",
+    strength: "0,0–1%",
+    image: IMAGES.beer.sinAlcohol,
+    desc: "Enormemente popular en España, especialmente en verano y al volante.",
+  },
+  {
+    name: "Cerveza Artesanal",
+    strength: "hasta 8%",
+    image: IMAGES.beer.artesanal,
+    desc: "El movimiento craft florece: IPAs frutales, ales ligeras y mucho más.",
+  },
 ]
 
 export default function HomePage() {
@@ -265,6 +285,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
             {beers.map((beer) => (
               <div key={beer.name} className="corrida-border p-6 hover:border-gold/60 transition-colors">
+                <div className="relative overflow-hidden rounded-sm border border-gold/15 mb-5">
+                  <Image
+                    src={beer.image}
+                    alt={beer.name}
+                    width={640}
+                    height={360}
+                    className="w-full h-32 object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-charcoal/15 to-transparent" />
+                </div>
                 <div className="flex items-center justify-between mb-4">
                   <div className="h-px flex-1 bg-gold/20" />
                   <span className="mx-3 text-gold text-xs">✦</span>
